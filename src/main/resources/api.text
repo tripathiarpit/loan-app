@@ -1,0 +1,19 @@
+Loans Microservice (Manages loans, EMI payments, and approvals)
+Loan Application & Processing
+POST /loans/apply – Apply for a new loan.
+GET /loans/{customerId} – Get loan details for a customer.
+POST /loans/{loanId}/approve – Approve a loan request (for internal use).
+POST /loans/{loanId}/reject – Reject a loan request (for internal use).
+PUT /loans/{loanId}/modify – Modify loan terms (e.g., tenure, interest rate).
+
+Loan Repayments & EMI Management
+GET /loans/{loanId}/repayment-schedule – View EMI schedule.
+POST /loans/{loanId}/repay – Make an EMI payment.
+GET /loans/{loanId}/balance – Get remaining balance & tenure.
+POST /loans/{loanId}/prepayment – Make an early loan repayment.
+GET /loans/{loanId}/statement – Get loan account statement.
+
+
+Loan Closure & Foreclosure
+POST /loans/{loanId}/foreclose – Request loan foreclosure.
+GET /loans/{loanId}/foreclosure-amount – Get foreclosure amount & charges.
